@@ -1,7 +1,7 @@
 *** Settings ***
-Documentation        Login Page
+Documentation       Login Page
 
-Resource        ../main.resource
+Resource            ../main.resource
 
 *** Keywords ***
 Go to Login Page
@@ -9,24 +9,24 @@ Go to Login Page
 
 Submit Credentials
     [Arguments]        ${email}        ${password}
-    Fill Text            css=input[name="email"]           ${email}
-    Fill Text            css=input[name="password"]        ${password}
-    Click                xpath=//button[text()="Entrar"] 
+    Fill Text          css=input[name="email"]           ${email}
+    Fill Text          css=input[name="password"]        ${password}
+    Click              xpath=//button[text()="Entrar"] 
 
 Submit Credentials Without Email
     [Arguments]        ${password}
-    Fill Text            css=input[name="password"]        ${password}
-    Click                xpath=//button[text()="Entrar"] 
+    Fill Text          css=input[name="password"]        ${password}
+    Click              xpath=//button[text()="Entrar"] 
 
 Submit Credentials Empty
-    Click                xpath=//button[text()="Entrar"]
+    Click       xpath=//button[text()="Entrar"]
 
 Submit Credentials Without Password
     [Arguments]        ${email}
-    Fill Text            css=input[name="email"]           ${email}
-    Click                xpath=//button[text()="Entrar"] 
-
+    Fill Text          css=input[name="email"]           ${email}
+    Click              xpath=//button[text()="Entrar"] 
+    
 Toast Message Should Be
-    [Arguments]        ${message_expected}
-    ${locator}          Set Variable        css=.Toastify__toast-body div >> text=${message_expected}
-    Wait For Elements State        ${locator}        visible        3
+    [Arguments]                    ${message_expected}
+    ${locator}                     Set Variable            css=.Toastify__toast-body div >> text=${message_expected}
+    Wait For Elements State        ${locator}              visible        3
