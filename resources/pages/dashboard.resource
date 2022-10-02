@@ -25,8 +25,7 @@ Whatsapp Sticker Message
     [Arguments]                    ${sticker_name}
 
     ${expected_message}            Set Variable
-    ...                            Oi, achei o seu contato no Trade Sticker. Estou interessado(a)
-    ...                            na figurinha do ${sticker_name}, bora negociar?
+    ...                            Oi, achei o seu contato no Trade Sticker. Estou interessado(a) na figurinha do ${sticker_name}, bora negociar?
 
     Switch Page                    NEW   
     Wait For Elements State        css=p >> text=${expected_message}

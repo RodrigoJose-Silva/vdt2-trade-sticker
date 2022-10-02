@@ -10,6 +10,6 @@ ${SLOGAN}        Conectando colecionadores de figurinhas da copa.
 Deve validar o slogan da home page
     New Browser         headless=False
     New Page            https://trade-sticker-dev.vercel.app/
-    Get Text            css=.logo-container h2        contains        ${SLOGAN}
+    Get Text            css=.logo-container h2      contains        ${SLOGAN}
     Take Screenshot
     
