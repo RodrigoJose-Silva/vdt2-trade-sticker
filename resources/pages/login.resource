@@ -12,19 +12,6 @@ Submit Credentials
     Fill Text          css=input[name="email"]           ${email}
     Fill Text          css=input[name="password"]        ${password}
     Click              xpath=//button[text()="Entrar"] 
-
-Submit Credentials Without Email
-    [Arguments]        ${password}
-    Fill Text          css=input[name="password"]        ${password}
-    Click              xpath=//button[text()="Entrar"] 
-
-Submit Credentials Empty
-    Click       xpath=//button[text()="Entrar"]
-
-Submit Credentials Without Password
-    [Arguments]        ${email}
-    Fill Text          css=input[name="email"]           ${email}
-    Click              xpath=//button[text()="Entrar"] 
     
 Toast Message Should Be
     [Arguments]                    ${message_expected}
